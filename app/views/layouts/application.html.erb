@@ -13,6 +13,7 @@
     <% if user_signed_in? %>
       <h2>Hello, <%= current_user.email %></h2>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to current_user.name , users_show_path %> 
     <% else %>
       <span>
         <%= link_to "サインイン", new_user_session_path %>
